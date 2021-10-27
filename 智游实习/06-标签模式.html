@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签模式</title>
+    <style>
+        /* 注意：三种模式可以进行转换 
+        display:inline-block 行内块 
+        
+        */
+        div{
+            display: inlinhe;
+            width: 500px;
+            height: 200px;
+            background-color: green;
+        }
+        span{
+            /* 尺寸生效 */
+
+            /* display: inline-block;行内块 */
+            /* display: block;块 */
+            /* display: inline;行 */
+            display: inline;
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+        img{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 块元素 行元素 行内块模式  -->
+    <!-- 块元素，一行显示一个，可以更改尺寸 -->
+    <!-- h1-h6 p div ul li  -->
+    <div>这是div</div>
+    <div>这是div</div>
+    <div>这是div</div>
+    <!-- 行元素 一行显示多个 不能更改尺寸 根据内容进行填充 根据内容显示大小 -->
+    <!-- a span b i s u  -->
+    <span>这是span</span>
+    <span>这是span</span>
+    <span>这是span</span>
+    <!-- 行内块 -->
+    <!-- 一行显示多个，并且可以更改尺寸，既满足行元素特点，又满足块元素限时模式 -->
+    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic3.zhimg.com%2Fv2-46a8e6a6f8419bc8bf02dcec85d991d2_b.jpg&refer=http%3A%2F%2Fpic3.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637829100&t=dac0ef2bd2b506e931ef17d910d6ff70" alt="">
+    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic3.zhimg.com%2Fv2-46a8e6a6f8419bc8bf02dcec85d991d2_b.jpg&refer=http%3A%2F%2Fpic3.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637829100&t=dac0ef2bd2b506e931ef17d910d6ff70" alt="">
+    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic3.zhimg.com%2Fv2-46a8e6a6f8419bc8bf02dcec85d991d2_b.jpg&refer=http%3A%2F%2Fpic3.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637829100&t=dac0ef2bd2b506e931ef17d910d6ff70" alt="">
+</body>
+</html>

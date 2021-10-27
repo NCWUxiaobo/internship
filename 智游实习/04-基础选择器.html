@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础选择器</title>
+    <style>
+        /*选择器是把一些标签进行分类选择*/
+        /* 1、ID选择器 
+             先定义 后调用
+             标签名选择器
+           2、用标签名选择
+           3、类选择器 class="类名"定义
+            .类名 调用
+           4、后代选择器 包含关系
+        */
+        #red{
+            color: red;
+        }
+        .yellow{
+            color: yellow;
+        }
+        #blue{
+            color: blue;
+        }
+        .green{
+            color: green;
+        }
+        div a i{
+            color: tomato;
+        }
+        /* 后代选择器与类选择器结合 */
+        div .one{
+            color: blue;
+        }
+        /*子元素选择样式
+        中间没有空格，用>链接 只选择一层关系的标签元素 父子关系
+        */
+        div>b {
+            color: blueviolet;
+        }
+        div>p>b{
+            color: cyan;
+        }
+        /*并集选择器，一个选择器中间用，隔开，实现集体样式*/
+        div b,h2,h3{
+            color: red;
+        }
+ </style>
+
+</head>
+<body>
+    <p id="red">愿你走出半生</p>
+    <p class="yellow">归来仍是少年</p>
+    <p id="blue">愿我洗尽铅华</p>
+    <p class="green">依旧笑颜如花</p>
+
+    <div>
+        <!--# 空连接 -->
+        <a class="one" href="#"><i>测试文本</i></a>
+        <a href="#">测试文本</a>
+        <a href="#">测试文本</a>
+    </div>
+    <!-- ----------------子元素选择器 -->
+    <div>
+        <b>一层关系</b>
+        <b>一层关系</b>
+        <b>一层关系</b>
+    </div>
+    <div>
+        <p>
+            <b>二层关系</b>
+            <b>二层关系</b>
+            <b>二层关系</b>
+        </p>
+        <h2>201820110;o</h2>
+    </div>
+</body>
+</html>

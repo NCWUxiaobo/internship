@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框</title>
+    <style>
+        div{
+            width: 500px;
+            height: 200px;
+            background-color: palegreen;
+            /* 所有元素均可添加边框属性 */
+            /* border-width 边框尺寸 
+                border-style 设置边框样式
+               solid直线 dashed 虚线 dotted 点线double 双线
+                顺时针执行程序 上右下左
+            */
+            border-width: 10px;
+            border-style: dotted;
+            border-color: red;
+        }
+        span{
+            display: block;
+            width: 400px;
+            height: 400px;
+            background-color: plum;
+            border: 10px solid blue;
+            /*圆角*/
+            border-radius: 50px;
+            /*可以实现圆形*/
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <span></span>
+</body>
+</html>
