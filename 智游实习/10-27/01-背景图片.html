@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图片</title>
+
+    <style>
+        *{
+            /* *通配符 会匹配页面中所有元素 */
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url("https://img1.baidu.com/it/u=2623891309,308090316&fm=26&fmt=auto");
+            /* 平铺 repeat  */
+            background-repeat: no-repeat;
+            /* 背景尺寸 
+                cover 全覆盖等比拉伸填充
+            */
+            /* background-size: cover;
+               contain 以最大的尺寸进行等比覆盖
+               正方形图用cover
+               长方形图用contain
+            */
+            width: 1000px;
+            height: 900px;
+            /* background-size: 500px 300px; x轴上的距离，y轴上的距离 */
+            /* 背景固定 
+            fixed 固定
+            
+            */
+            background-attachment: local;
+
+            /* 背景定位 */
+            /* background-position: x y; 正值向右下走，负值向左上 */
+            background-position: 20% 20%;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            /* 透明色 rgb十进制颜色值 代表三原色   alpha 透明度取值0---1*/
+            background-color: rgba(0,0,0, 0.5);
+            /* 十六进制 */
+            /* background-color: #333333; */
+            text-align: center;
+            margin: 50px auto;
+            line-height: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>测试</div>
+    <p>
+        <pre>
+            <!-- pre 预格式化文本标签，写在标签里面的所有格式会被保留 -->
+            <center>中心显示
+
+
+
+                今天
+                我
+                做事
+
+
+                人情世故
+
+
+            </center>
+        </pre>
+        
+    </p>
+</body>
+</html>

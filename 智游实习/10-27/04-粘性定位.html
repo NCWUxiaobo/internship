@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粘性定位</title>
+    <style>
+        li{
+            width: 200px;
+            height: 100px;
+            background:rebeccapurple;
+            /* 去掉列表标签的默认样式 */
+            list-style: none;
+        }
+        /* nth-child(2n) 匹配子元素选择器 n=2 2*0.... */
+        li:nth-child(2n){
+            background:sandybrown
+        }
+        li:nth-child(1) {
+            /* 实现当滚动时粘在顶层 
+            3、粘性定位
+            定位模式+偏移量
+            */
+            position: sticky;
+            top: 0;
+        }
+        li:nth-child(2) {
+            /* 实现当滚动时粘在顶层 
+            3、粘性定位
+            定位模式+偏移量
+            */
+            position: sticky;
+            top: 50px;
+        }
+        /* X轴方向粘性定位 */
+        div{
+            width: 800px;
+            height: 200px;
+            background: seagreen;
+            /* 一行显示内容的属性 */
+            white-space: nowrap;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 添加x轴上的滚轮 */
+            overflow-x: scroll;
+            /* 添加y轴上的滚轮 */
+            /* overflow-y: scroll; */
+            /* 水平垂直都有滚动效果 */
+            /* overflow: auto; */
+        }
+        span{
+            /* 转成行内块 */
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            background: violet;
+        }
+        span:nth-child(2n) {
+            background: tomato;
+        }
+        span:nth-child(3){
+            position: sticky;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <ul>
+        <li>131231</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

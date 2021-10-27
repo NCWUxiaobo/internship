@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过渡动画</title>
+</head>
+
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background: turquoise;
+        margin: 100px auto;
+        /*transition 过渡动画属性 简写*/
+        transition: all 3s;
+        /* transition-duration: 动画执行时间，以秒为单位; */
+        /* 动画行驶轨迹，以什么样速度改变 linear 匀速 ease 舒缓的 
+           ease-in 由慢到快
+           ease-out 由快到慢
+           ease-in-out 慢快慢
+        */
+        transition-timing-function:ease;
+
+        /* 动画的执行者 */
+        transition-property: all;
+
+        /*动画延迟时间*/
+        transition-delay: 2s;
+    }
+
+    /* 过渡动画 当元素发生改变时，有缓冲的过渡环节 谁需要发生改变就添加*/
+
+    div:hover{
+        border-radius: 50%;
+        background-color: tomato;
+    }
+</style>
+
+<body>
+    <div></div>
+</body>
+</html>

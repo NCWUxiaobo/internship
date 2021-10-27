@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .one{
+            width: 200px;
+            height: 200px;
+            background-color: plum;
+
+            /* 定位属性 
+                相对定位
+                绝对定位
+                粘性定位
+                固定定位
+                定位= 定位+定位模式+偏移量
+            */
+            /* 1、相对定位  relative相对定位 上下左右四个方向定义偏移量*/
+            /* 相对定位保留元素标准流的位置 即自己原有的标准流中进行移动 */
+            position: relative;
+            top: 100px;
+            left: 500px;
+        }
+        /* 2、相对定位 */
+        /* 相对定位元素脱离标准流会影响下面元素布局 */
+        .item1{
+            display: block;
+            width: 600px;
+            height: 600px;
+            background-color: royalblue;
+            /* 写出相对定位模式，是为了给下面item3做参照 */
+            position: relative;
+        }
+        .item2,
+        .item3{
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+        }
+        .item2{
+            /* 2、相对定位 参照物 依赖绝对定位模式 默认为浏览器*/
+            position: absolute;
+            top: 0;
+            left:100px;
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <div>1</div>
+    <div class="one">2</div>
+    <div>3</div>
+    <span class="item1">
+        <span class="item2">123</span>
+        <span class="item3">123</span>
+
+    </span>
+</body>
+</html>

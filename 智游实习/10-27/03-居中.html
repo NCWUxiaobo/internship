@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中效果</title>
+    <style>
+        div{
+            width:500px;
+            height: 200px;
+            background-color: aqua;
+            /* 文字居中 */
+            text-align: center;
+            /*块元素居中 auto 自动居中 0代表上下 auto代表左右居中*/
+            margin: 50px auto;
+            /* 垂直居中 行高 */
+            /* line-height: 200px; */
+            /*border 边框*/
+            border: 2px solid red;
+
+        }
+        img{
+            /* 让图片适应div 让图片的某一个尺寸100 */
+            height: 100%;
+           
+        }
+        .one{
+             /*文字与图片的对齐方式 
+             middle
+             bottom
+             baseline 基线
+             */
+             vertical-align: top;
+        }
+        .two{
+            vertical-align:middle;
+        }
+        .three{
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        今天6点起床，有点困呀 .
+    </div>
+    <div><img class="one" src="https://search-operate.cdn.bcebos.com/2278a38e654d7160ef5a7b084217a660.jpg" alt="">第一张图</div>
+    <div><img class="two" src="https://search-operate.cdn.bcebos.com/2278a38e654d7160ef5a7b084217a660.jpg" alt="">第二张图</div>
+    <div><img class="three" src="https://search-operate.cdn.bcebos.com/2278a38e654d7160ef5a7b084217a660.jpg" alt="">第三张图</div>
+</body>
+</html>
