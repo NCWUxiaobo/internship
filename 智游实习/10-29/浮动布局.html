@@ -10,13 +10,24 @@
     <style>
         /* 1、行内块 */
         nav{
+            /* 一般情况下布局页面父元素不方便给高度 */
+            
+            /* height: 60px; */
             width: 800px;
-            height: 60px;
             background-color: aquamarine;
             margin: 10px auto;
+            /* 清除浮动布局效果的功能 需要添加到浮动元素的父级*/
+            /* overflow: hidden; */
             /* 行高显示中间 */
             /* line-height: 60px; */
         }
+
+        ul{
+            /* 去掉ul默认内边距 */
+            padding: 0;
+            overflow: hidden;
+        }
+
         li{
             /* 去掉列表默认样式 */
             list-style: none;
@@ -26,7 +37,12 @@
             /* display: inline-block; */
             /* float 给元素添加浮动 快速使垂直元素水平排列*/
             /* 两个参数分别为左右 */
-            float: left;
+            /* float: left; */
+
+            /* 浮动：添加了浮动的元素会脱离标准流 不占有位置 */
+            /* 清楚浮动布局影响 */
+            /* 1、额外标签 */
+
         }
 
         .one{
@@ -35,6 +51,17 @@
         .two{
             float: right;
         }
+        .box{
+            width: 800px;
+            height: 200px;
+            background-color: chocolate;
+        }
+
+        /* 添加清除效果 both 左右浮动都清除 还有left和right两个值*/
+        /* .clear{
+            clear:both;
+        } */
+
     </style>
 
 <body>
@@ -43,12 +70,14 @@
         <ul>
             <li class="one">
                 <a href="#">新闻</a>
-                <a href="">hao123</a>
-                <a href=""></a>
             </li>
             <li class="two"><a href="#">123</a></li>
+            <!-- 最后一个浮动的元素后面添加上一个空标签 -->
+            <!-- <div class="clear"></div> -->
         </ul>
+        <!-- nav 没有给高度 里面的元素又添加了浮动 -->
     </nav>    
+    <div class="box"></div>
 </body>
 
 </html>

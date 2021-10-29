@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精灵图片</title>
+
+    <style>
+        div{
+            width: 48px;
+            height: 48px;
+            background-color: yellow;
+            display: inline-block;
+            background:url('../img/精灵图2.png') ;
+            /* margin: 50px 50%; */
+        }
+        .one{
+            /* 第一个显示五角星 */
+            background-position: 0 -51px;
+        }
+        .two{
+            /* 放大镜 */
+            background-position: 0 -204px;
+        }
+        .three{
+            /* 问号 */
+            background-position: 0 -255px;
+        }
+        .four{
+            /* 隐藏 */
+            background-position: 0 -153px;
+            /* 盒子阴影 x 轴 y轴 阴影的尺寸 颜色 */
+            box-shadow:0px 0px 10px yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+</body>
+
+</html>

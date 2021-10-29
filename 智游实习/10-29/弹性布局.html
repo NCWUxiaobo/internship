@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性布局</title>
+
+    <style>
+
+
+        /* 弹性布局  快速实现元素的排列方式转换  垂直->水平*/
+        /* 使用：需要给父级添加 使子元素按照布局要求排列 */
+
+        section{
+            margin: 40px auto;
+            width: 800px;
+            height: 900px;
+            background-color: cornflowerblue;
+            /* flex 伸缩 使用弹性布局*/
+            /* 特点 强制一行显示 改变子元素的尺寸*/
+            display: flex;
+            /* nowrap 不换行 */
+            /* flex-wrap 设置子元素是否换行 */
+            /* wrap 换行 子元素的尺寸相加 > 父元素 下一行显示 */
+            flex-wrap: wrap;
+
+            /* 内容对齐方式  justify-content  center 中心显示
+            
+                space-between 两端对齐
+                space-around  等距对齐
+            */
+            justify-content: space-around;
+
+        }
+
+        div{
+            width: 200px;
+            height: 300px;
+            background-color: crimson;
+            /* 行内块自带的间距4px */
+            /* 1、display: inline-block; 行内块默认自带间距 */
+            /* 垂直排列元素快速水平排列 */
+            /* 浮动 */
+            /* 2、float: left; 清除浮动布局效果 */
+        }
+
+        div:nth-child(2n){
+            background-color: yellow;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- section 段、部分 帮助实现布局 -->
+    <section>
+        <!-- div*9{$}   快速生成带序号内容的标签 -->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <!-- <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div> -->
+    </section>
+</body>
+
+</html>
