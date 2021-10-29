@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动布局</title>
+</head>
+
+    <style>
+        /* 1、行内块 */
+        nav{
+            width: 800px;
+            height: 60px;
+            background-color: aquamarine;
+            margin: 10px auto;
+            /* 行高显示中间 */
+            /* line-height: 60px; */
+        }
+        li{
+            /* 去掉列表默认样式 */
+            list-style: none;
+            width: 80px;
+            height: 30px;
+            background-color: brown;
+            /* display: inline-block; */
+            /* float 给元素添加浮动 快速使垂直元素水平排列*/
+            /* 两个参数分别为左右 */
+            float: left;
+        }
+
+        .one{
+            float: left;
+        }
+        .two{
+            float: right;
+        }
+    </style>
+
+<body>
+    <nav>
+        <!-- 导航栏标签 -->
+        <ul>
+            <li class="one">
+                <a href="#">新闻</a>
+                <a href="">hao123</a>
+                <a href=""></a>
+            </li>
+            <li class="two"><a href="#">123</a></li>
+        </ul>
+    </nav>    
+</body>
+
+</html>

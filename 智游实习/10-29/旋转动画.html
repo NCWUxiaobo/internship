@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摩天轮</title>
+
+    <style>
+       
+        .title{
+            width: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%)
+        }
+        main{
+            width: 700px;
+            height: 700px;
+            /* background-color: aqua; */
+            /* 这里开启相对定位是给title做参照 */
+            position: relative;
+            margin: 50px auto;
+        }
+        body{
+            /* 十六进制  */
+            background-color: #333;
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/images/fsw.png');
+            /* 用来调整图片不规则填充 contain 让图片找最大尺寸 cover 找最小边 */
+            background-size: contain;
+            /* 这里开启相对是给小缆车做参照 */
+            position: relative;
+            /* linear匀速 infinite 一直执行 */
+            animation: box_rot 25s linear infinite;
+        }
+        
+        .item1{
+            /* 定位 */
+            position: absolute;
+            top:50px;
+            left: 50px;
+            animation: item_rot 25s linear infinite;
+            /* 旋转原点 控制元素以哪一个点进行旋转 */
+            /* transform-origin: X,Y; */
+            /* transform-origin: center 50px; */
+        }
+        .item2{
+            /* 定位 */
+            position: absolute;
+            top:-25px;
+            left: 280px;
+            animation: item_rot 25s linear infinite;
+        }
+        .item3{
+            /* 定位 */
+            position: absolute;
+            top:45px;
+            left: 500px;
+            animation: item_rot 25s linear infinite;
+        }
+        .item4{
+            /* 定位 */
+            position: absolute;
+            top:245px;
+            left: 590px;
+            animation: item_rot 25s linear infinite;
+        }
+        .item5{
+            /* 定位 */
+            position: absolute;
+            top:475px;
+            left: 525px;
+            animation: item_rot 25s linear infinite;
+        }
+        .item6{
+            /* 定位 */
+            position: absolute;
+            top:555px;
+            left: 300px;
+            animation: item_rot 25s linear infinite;
+        }
+        .item7{
+            /* 定位 */
+            position: absolute;
+            top:475px;
+            left: 75px;
+            animation: item_rot 25s linear infinite;
+        }
+        .item8{
+            /* 定位 */
+            position: absolute;
+            top:245px;
+            left: 0px;
+            animation: item_rot 25s linear infinite;
+        }
+
+        /* 开启架构旋转动画 控制大的摩天轮做旋转动画 */
+        @keyframes box_rot{
+            /* 0%{
+                transform: rotate(0deg);
+            } */
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 开启缆车旋转动画 */
+        @keyframes item_rot{
+            100%{
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <!-- 提供容器元素 -->
+        <div class="box">
+            <!-- 用来存放摩天轮架子 -->
+            <!-- 实现缆车 -->
+            <img class="item1" src="../img/images/boy.png" alt="">
+            <img class="item2" src="../img/images/dog.png" alt="">
+            <img class="item3" src="../img/images/girl.png" alt="">
+            <img class="item4" src="../img/images/girls.png" alt="">
+            <img class="item5" src="../img/images/hairboy.png" alt="">
+            <img class="item6" src="../img/images/mimi.png" alt="">
+            <img class="item7" src="../img/images/mudog.png" alt="">
+            <img class="item8" src="../img/images/shamegirl.png" alt="">
+        </div>
+        <img class="title" src="../img/images/big-title.png" alt="">
+    </main>
+</body>
+
+</html>

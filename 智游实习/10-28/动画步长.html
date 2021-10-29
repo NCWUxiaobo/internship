@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画步长</title>
+
+    <style>
+        div{
+            width: 128px;
+            height: 20px;
+            background-color: blueviolet;
+            color: chartreuse;
+            animation: str 4s steps(8) forwards;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 文字强制一行显示 */
+            white-space: nowrap;
+        }
+
+        @keyframes str{
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 128px;
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div>预祝大家考研顺利</div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本动画</title>
+</head>
+
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+            /* margin: 0 50%; */
+        
+            /* 动画的使用 ：1、开启动画 2、调用动画*/
+            /*2、调用动画 使用者调用 */
+            /* 动画名称 */
+            animation-name: move;
+
+            /* 动画执行时间 */
+            animation-duration: 3s;
+
+            /*linear 匀速 step 步长 step-start跳跃回到开始 step-end跳跃回到开始*/
+
+            animation-timing-function: linear;
+
+            /*动画重复的次数  infinite 无限循环 数字数值无单位*/
+            animation-iteration-count: 1;
+
+            /*动画延迟的时间 以秒为单位*/
+            /* animation-delay: 2s; */
+            
+            
+            /*
+            是否反向执行动画 ，normal默认值 正常
+            alternate 第一次执行之后，反向执行
+            reverse 始终反向执行
+            */
+
+            /* animation-direction: reverse; */
+
+            /*
+                动画结束后的状态
+                forwards 停留在结束的位置
+                backwards 停留在开始的位置
+            */
+            animation-fill-mode: forwards;
+            
+            /* 组合属性 注意：两次时间第一次执行时间 第二次延迟时间 */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+        }
+        /* 1、开启动画 语法结构*/
+
+        /* @keyframes 动画名  {
+            
+                多个动画节点 必要添加的两个节点 开始节点 结束节点
+                整数 百分制表示 
+            0%{
+                
+            }
+            20%{
+
+            }
+            40%{
+
+            }
+            100%{
+
+            }
+        } */
+
+        @keyframes move{
+            0%{
+                transform: translate(0);
+            }
+            /* 25%{
+                transform: translate(300px,0);
+            }
+            50%{
+                transform: translate(300px,500px);
+            }
+            75%{
+                transform: translate(0px,500px);
+            } */
+            100%{
+                transform: translate(1000px,0);
+            }
+        }
+        /* 触碰停止属性 */
+        div:hover{
+            /* paused 停止 running 默认值  */
+            animation-play-state: paused;
+        }
+    </style>
+
+<body>
+    <!-- 动画css3更新后最具颠覆性的特征，通过设置多个节点控制一个或多个动画元素 -->
+    <!-- 可以实现复杂的动画效果、多层动画叠加 -->
+
+    <div></div>
+
+</body>
+
+</html>

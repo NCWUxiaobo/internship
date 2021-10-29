@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帧动画讲解</title>
+
+</head>
+
+    <style>
+        div{
+            width: 180px;
+            height: 325px;
+            background-color: aqua;
+            /* 只设定上边距 */
+            margin-top: 40px;
+            background: url("../img/dh.jpg") no-repeat;
+            /* 动画调用可以实现多个 */
+            animation: people 1s steps(8) infinite,move 3s forwards;
+            position: absolute;
+        }
+
+        /* 先开启小人走动动画 */
+        @keyframes people{
+            /* from{
+
+            }
+            to{
+
+            } */
+            0%{
+                /* 用背景定位实现每帧动画移动 */
+                background-position: 0 0;
+            }
+            100%{
+                /* 负值  控制图片向左移动 */
+                background-position: -1472px,0;
+            }
+        }
+        
+        /* 控制前行动画 走动动画 */
+        @keyframes move{
+            0%{
+                left: 0;
+            }
+            100%{
+                left: 50%;
+                transform: translate(-50%);             
+            }
+        }
+
+    </style>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>

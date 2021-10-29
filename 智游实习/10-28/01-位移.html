@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        div:first-child{
+            /*选中第一个子元素*/
+            background-color: blue;
+            /* 位移：移动元素的位置  */
+            /* transfor 包含位移 旋转 缩放 */
+            /* 开启transform属性，选中参数 位移参数 translate 位移 */
+            transform: translateX(100px);
+            /* transform: translate(x,y) */
+            transform: translate(100px,100px);
+        }
+        div:last-child{
+            background-color: brown;
+            /* Y轴垂直方向移动 */
+
+            /*定位+位移实现元素中心显示*/
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+
+    </style>
+</body>
+    <div>1</div>
+    <div>2</div>
+</html>
